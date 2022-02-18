@@ -20,3 +20,8 @@ class ElementsLocators:
     button_minus = (By.CSS_SELECTOR, "[class='rct-icon rct-icon-collapse-all']")
     button_notes = (By.XPATH, "//span [text() = 'Notes']")
     button_commands = (By.XPATH, "//span [text() = 'Commands']")
+
+    button_radio_button = (By.XPATH, "//span [text() = 'Radio Button']")
+    text_radio_button = (By.XPATH, "//div [text() = 'Radio Button']")
+    button_yes = (By.XPATH, "//label [text() = 'Yes']")
+

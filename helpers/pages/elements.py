@@ -58,6 +58,15 @@ class Elements:
     def select_commands(self):
         self.support_ui.find_element(*self.locators.button_commands).click()
 
+    def enter_radio_button(self):
+        self.support_ui.find_element(*self.locators.button_radio_button).click()
+
+    def text_radio_button(self):
+        return self.support_ui.find_element(*self.locators.text_radio_button).text
+
+    def enter_yes(self):
+        self.support_ui.find_element(*self.locators.button_yes).click()
+
     # [Сценарии]
     def test_elements_text_box(self):
         text_elements = "Elements"
@@ -83,3 +92,12 @@ class Elements:
         self.select_notes()
         self.select_commands()
         self.enter_minus()
+
+    def test_elements_radio_button(self):
+        text_elements = "Elements"
+        text_radio_button = "Radio Button"
+        self.enter_button_elements()
+        assert self.text_elements() == text_elements, "Ошибка входа. Страница 'Elements'"
+        self.enter_radio_button()
+        assert self.text_radio_button() == text_radio_button, "Не удалось открыть вкладку 'Radio Button'"
+        self.enter_yes()
