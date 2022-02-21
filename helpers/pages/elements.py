@@ -67,6 +67,42 @@ class Elements:
     def enter_yes(self):
         self.support_ui.find_element(*self.locators.button_yes).click()
 
+    def enter_web_tables(self):
+        self.support_ui.find_element(*self.locators.button_web_tables).click()
+
+    def text_web_tables(self):
+        return self.support_ui.find_element(*self.locators.text_web_tables).text
+
+    def enter_add(self):
+        self.support_ui.find_element(*self.locators.button_add).click()
+
+    def enter_firs_name(self, text):
+        self.support_ui.enter_text(text, *self.locators.field_first_name)
+
+    def enter_last_name(self, text):
+        self.support_ui.enter_text(text, *self.locators.field_last_name)
+
+    def enter_email_wt(self, text):
+        self.support_ui.enter_text(text, *self.locators.field_email_wt)
+
+    def enter_age(self, text):
+        self.support_ui.enter_text(text, *self.locators.field_age)
+
+    def enter_salary(self, text):
+        self.support_ui.enter_text(text, *self.locators.field_salary)
+
+    def enter_department(self, text):
+        self.support_ui.enter_text(text, *self.locators.field_department)
+
+    def enter_button_submit(self):
+        self.support_ui.find_element(*self.locators.button_submit_wt).click()
+
+    def enter_search_box(self,text):
+        self.support_ui.enter_text(text, *self.locators.field_searchBox)
+
+    def enter_delete(self):
+        self.support_ui.find_element(*self.locators.button_delete).click()
+
     # [Сценарии]
     def test_elements_text_box(self):
         text_elements = "Elements"
@@ -101,3 +137,21 @@ class Elements:
         self.enter_radio_button()
         assert self.text_radio_button() == text_radio_button, "Не удалось открыть вкладку 'Radio Button'"
         self.enter_yes()
+
+    def test_elements_web_tables(self):
+        text_elements = "Elements"
+        text_web_tables = "Web Tables"
+        self.enter_button_elements()
+        assert self.text_elements() == text_elements, "Ошибка входа. Страница 'Elements'"
+        self.enter_web_tables()
+        assert self.text_web_tables() == text_web_tables, "Не удалось открыть вкладку 'Web Tables'"
+        self.enter_add()
+        self.enter_firs_name("Tembulat")
+        self.enter_last_name("Ketov")
+        self.enter_email_wt("ketv@list.ru")
+        self.enter_age("21")
+        self.enter_salary("70000")
+        self.enter_department("QA Automation Engineer")
+        self.enter_button_submit()
+        self.enter_search_box("Ketov")
+        self.enter_delete()
