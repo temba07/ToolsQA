@@ -15,3 +15,8 @@ def setup_and_teardown():
 @pytest.fixture()
 def elements():
     return application
+
+
+@pytest.fixture()
+def forms():
+    return application

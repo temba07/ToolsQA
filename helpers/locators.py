@@ -37,3 +37,9 @@ class ElementsLocators:
     button_submit_wt = (By.CSS_SELECTOR, "#submit")
     field_searchBox = (By.CSS_SELECTOR, "#searchBox")
     button_delete = (By.CSS_SELECTOR, "#delete-record-4")
+
+
+class FormsLocators:
+    button_forms = (By.XPATH, "//*[@id='app']/div/div/div[2]/div/div[2]/div/div[1]")
+    button_practice_form = (By.XPATH, "//span [text() = 'Practice Form']")
+    text_practice_form = (By.XPATH, "//div [text() = 'Practice Form']")

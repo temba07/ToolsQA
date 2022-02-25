@@ -1,5 +1,6 @@
 from selenium import webdriver
 from helpers.pages.elements import Elements
+from helpers.pages.forms import Forms
 
 
 class Application:
@@ -10,4 +11,4 @@ class Application:
         self.webdriver.implicitly_wait(5)
 
         self.elements = Elements(self.webdriver)
-
+        self.forms = Forms(self.webdriver)
