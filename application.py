@@ -1,6 +1,7 @@
 from selenium import webdriver
 from helpers.pages.elements import Elements
 from helpers.pages.forms import Forms
+from helpers.pages.alerts_frame_and_windows import AlertsFrameAndWindows
 
 
 class Application:
@@ -12,3 +13,5 @@ class Application:
 
         self.elements = Elements(self.webdriver)
         self.forms = Forms(self.webdriver)
+        self.alerts_frame_and_windows = AlertsFrameAndWindows(self.webdriver)
+

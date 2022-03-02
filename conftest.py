@@ -20,3 +20,8 @@ def elements():
 @pytest.fixture()
 def forms():
     return application
+
+
+@pytest.fixture()
+def alerts_frame_and_windows():
+    return application

@@ -54,3 +54,8 @@ class FormsLocators:
     check_box_sports = (By.XPATH, "//label [text() = 'Sports']")
     check_box_reading = (By.XPATH, "//label [text() = 'Reading']")
     field_current_address = (By.CSS_SELECTOR, "#currentAddress")
+
+
+class AlertsFrameAndWindowsLocators:
+    button_alerts_frame_and_windows = (By.XPATH, "//*[@id='app']/div/div/div[2]/div/div[3]/div/div[1]")
+    text_alerts_frame_and_windows = (By.XPATH, "//*[@id='app']/div/div/div[1]/div")
